@@ -9,7 +9,7 @@ import { routes } from "@/router/index";
       <el-header>Header</el-header>
       <el-container>
         <el-aside width="200px">
-          <el-menu default-active="0">
+          <el-menu>
             <menu-item v-for="(item, index) in routes" :routerRaw="item" :key="item.path" :index="index + ''" />
           </el-menu>
         </el-aside>
