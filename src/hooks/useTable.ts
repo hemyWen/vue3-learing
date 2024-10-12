@@ -1,6 +1,6 @@
 import { ref } from "vue";
 
-export function useTable(api) {
+export function useTable(api: () => Promise<any>) {
   const data = ref([]);
   const refresh = () => {
     api().then((res) => {

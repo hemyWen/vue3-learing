@@ -1,7 +1,7 @@
 <template>
   <el-sub-menu v-if="props.routerRaw.children && props.routerRaw.children.length" :index="index">
     <template #title>
-      <span>{{ props.routerRaw.name }}</span>
+      <span>{{ props.routerRaw.meta?.title }}</span>
     </template>
     <menu-item
       v-for="(item, idx) in props.routerRaw.children"
@@ -11,7 +11,7 @@
     />
   </el-sub-menu>
   <el-menu-item v-else :index="index" @click="router.push({ name: props.routerRaw.name })">
-    <span>{{ props.routerRaw.name }}</span>
+    <span>{{ props.routerRaw.meta?.title }}</span>
   </el-menu-item>
 </template>
 <script setup lang="ts">
