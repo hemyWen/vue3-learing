@@ -51,6 +51,39 @@ export const routes = [
         },
         component: () => import("@/views/optimize/section.vue"),
       },
+      {
+        path: "requestAnimationFrame",
+        name: "requestAnimationFrame",
+        meta: {
+          title: "requestAnimationFrame",
+        },
+        component: () => import("@/views/optimize/requestAnimationFrame/index.vue"),
+      },
+      {
+        path: "defer",
+        name: "deder",
+        meta: {
+          title: "defer优化",
+        },
+        component: () => import("@/views/optimize/defer/index.vue"),
+      },
+    ],
+  },
+  {
+    path: "/test",
+    name: "test",
+    meta: {
+      title: "测试",
+    },
+    children: [
+      {
+        path: "testIndex",
+        name: "testIndex",
+        meta: {
+          title: "测试",
+        },
+        component: () => import("@/views/test/index.vue"),
+      },
     ],
   },
 ];
